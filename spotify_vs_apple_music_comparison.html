@@ -1,0 +1,157 @@
+
+<style>
+  h2.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+  .wrap { padding: 1.5rem 0; font-family: var(--font-sans); }
+  .header-row { display: grid; grid-template-columns: 200px 1fr 1fr; gap: 0; margin-bottom: 0; }
+  .header-cell { padding: 10px 16px; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); }
+  .header-cell.spotify { background: #1DB954; color: #0a5c26; border-radius: 8px 0 0 0; }
+  .header-cell.apple { background: #fc3c44; color: #6b0d11; border-radius: 0 8px 0 0; }
+  .table-body { border: 0.5px solid var(--border); border-radius: 0 0 12px 12px; overflow: hidden; }
+  .row { display: grid; grid-template-columns: 200px 1fr 1fr; border-bottom: 0.5px solid var(--border); }
+  .row:last-child { border-bottom: none; }
+  .row:hover { background: var(--surface-1); }
+  .dim-cell { padding: 14px 16px; font-size: 13px; font-weight: 500; color: var(--text-secondary); background: var(--surface-1); border-right: 0.5px solid var(--border); display: flex; align-items: flex-start; gap: 8px; }
+  .content-cell { padding: 14px 16px; font-size: 13px; color: var(--text-primary); line-height: 1.55; border-right: 0.5px solid var(--border); }
+  .content-cell:last-child { border-right: none; }
+  .win-badge { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 10px; margin-bottom: 6px; }
+  .win-s { background: #d4f5e2; color: #0a5c26; }
+  .win-a { background: #fde0e1; color: #6b0d11; }
+  .win-tie { background: var(--surface-1); color: var(--text-muted); border: 0.5px solid var(--border); }
+  .section-title { font-size: 12px; font-weight: 500; color: var(--text-muted); margin-bottom: 4px; }
+  .rec-box { margin-top: 2rem; border: 2px solid #1DB954; border-radius: 12px; padding: 1.25rem 1.5rem; background: var(--surface-2); }
+  .rec-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .rec-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; color: #0a5c26; background: #d4f5e2; padding: 3px 9px; border-radius: 10px; }
+  .rec-title { font-size: 16px; font-weight: 500; color: var(--text-primary); margin-bottom: 6px; }
+  .rec-body { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+  .rec-body strong { font-weight: 500; color: var(--text-primary); }
+  .scores { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.5rem; }
+  .score-card { background: var(--surface-1); border-radius: 8px; padding: 12px 14px; border: 0.5px solid var(--border); }
+  .score-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+  .score-bars { display: flex; flex-direction: column; gap: 5px; }
+  .bar-row { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+  .bar-label { width: 100px; color: var(--text-secondary); flex-shrink: 0; }
+  .bar-track { flex: 1; height: 6px; background: var(--surface-0); border-radius: 3px; overflow: hidden; }
+  .bar-fill-s { height: 100%; background: #1DB954; border-radius: 3px; }
+  .bar-fill-a { height: 100%; background: #fc3c44; border-radius: 3px; }
+  .bar-pct { width: 28px; font-size: 11px; color: var(--text-muted); text-align: right; }
+</style>
+
+<div class="wrap">
+  <h2 class="sr-only">Competitive analysis: Spotify vs Apple Music across six product dimensions with a strategic recommendation for Spotify</h2>
+
+  <div class="header-row">
+    <div class="header-cell" style="background:transparent;"></div>
+    <div class="header-cell spotify">Spotify</div>
+    <div class="header-cell apple">Apple Music</div>
+  </div>
+
+  <div class="table-body">
+
+    <div class="row">
+      <div class="dim-cell"><i class="ti ti-layout-grid" aria-hidden="true" style="font-size:15px; flex-shrink:0; margin-top:1px;"></i>Core features</div>
+      <div class="content-cell">
+        <span class="win-badge win-s">Spotify-only</span><br>
+        Free ad-supported tier · AI DJ · Blend (social playlists) · Podcast + audiobook + video in one app · Cross-platform (Linux, game consoles, web) · Spotify Connect multi-device handoff · Wrapped year-in-review
+      </div>
+      <div class="content-cell">
+        <span class="win-badge win-a">Apple-only</span><br>
+        Hi-Res Lossless up to 24-bit/192kHz · Dolby Atmos Spatial Audio · Siri + CarPlay + HomePod native control · Deep Apple Watch + AirPods integration · iTunes library import · Lyrics + time-synced sing-along
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="dim-cell"><i class="ti ti-brush" aria-hidden="true" style="font-size:15px; flex-shrink:0; margin-top:1px;"></i>UX &amp; design</div>
+      <div class="content-cell">
+        <span class="win-badge win-s">Stronger</span><br>
+        Consistent cross-platform UI · Friend Activity sidebar · Home mixes podcasts with music (cluttered for music-only users) · More widget and notification options on Android
+      </div>
+      <div class="content-cell">
+        <span class="win-badge win-a">Stronger</span><br>
+        Native iOS/macOS look and feel · Seamless device handoff · Cleaner music-only interface · Android app still lags iOS in polish · Minimal social UI
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="dim-cell"><i class="ti ti-users" aria-hidden="true" style="font-size:15px; flex-shrink:0; margin-top:1px;"></i>Target user</div>
+      <div class="content-cell">
+        Global, platform-agnostic listener who values discovery, social sharing, and free access. Strong with 18–34s, independent music fans, podcast consumers, and Android users.
+      </div>
+      <div class="content-cell">
+        Apple ecosystem owner who prioritizes audio quality and seamless hardware integration. Skews toward audiophiles, iPhone/Mac users, families on Apple One bundles.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="dim-cell"><i class="ti ti-coin" aria-hidden="true" style="font-size:15px; flex-shrink:0; margin-top:1px;"></i>Business model</div>
+      <div class="content-cell">
+        Freemium: ad-supported free tier + Premium subscriptions ($12.99/mo after Jan 2026 increase). Revenue ~$16.5B in 2025; ~87% from Premium. Growing higher-margin layers: podcast ads, Audiobooks+ add-on ($100M ARR), video. 751M MAUs, 290M paid.
+      </div>
+      <div class="content-cell">
+        Subscription-only ($10.99/mo individual). No free tier. Profits flow to Apple's services segment — not disclosed separately. Apple One bundles bundle it with TV+, Arcade, iCloud (individual $19.95/mo), making churn cost much higher.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="dim-cell"><i class="ti ti-arrow-badge-down" aria-hidden="true" style="font-size:15px; flex-shrink:0; margin-top:1px;"></i>Where Spotify loses users</div>
+      <div class="content-cell" style="grid-column: span 2; border-right: none;">
+        <span class="win-badge win-a">Apple gains here</span><br>
+        <b>Audio quality:</b> Apple leads on Hi-Res Lossless (24-bit/192kHz) and Dolby Atmos Spatial Audio — Spotify's lossless stops at 44.1kHz with no spatial tier.<br>
+        <b>Price:</b> Apple Music is $2/mo cheaper for individuals; family plan gap is $5/mo after Spotify's Jan 2026 price hike.<br>
+        <b>Ecosystem lock-in:</b> AirPods, HomePod, Apple Watch integration creates a moat Spotify can't match as a third-party app.<br>
+        <b>Apple One bundling:</b> Families already on iCloud/TV+ get Apple Music effectively free — pure churn magnet.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="dim-cell"><i class="ti ti-bulb" aria-hidden="true" style="font-size:15px; flex-shrink:0; margin-top:1px;"></i>Opportunity for Spotify</div>
+      <div class="content-cell" style="grid-column: span 2; border-right: none; color: var(--text-secondary);">
+        See strategic recommendation below ↓
+      </div>
+    </div>
+
+  </div>
+
+  <div class="rec-box">
+    <div class="rec-header">
+      <span class="rec-label">PM recommendation</span>
+    </div>
+    <div class="rec-title">Build "Spatial Sound" — Dolby Atmos-class immersive audio, natively on Spotify</div>
+    <div class="rec-body">
+      The single biggest structural reason a premium listener chooses Apple Music over Spotify is <strong>Dolby Atmos Spatial Audio</strong> — a 3D immersive sound experience that makes familiar tracks feel physically transformed. Spotify rolled out lossless in late 2025, but spatial audio remains entirely absent. This isn't a niche audiophile feature anymore: Apple has trained millions of AirPods users to expect it.<br><br>
+      <strong>What to build:</strong> License or build Spotify Spatial, a Dolby Atmos playback layer for Premium subscribers. Partner with Dolby (or compete via Sony 360 Reality Audio) and invest in a catalogue re-mixing program with major labels — similar to what Apple has already funded.<br><br>
+      <strong>Why this wins:</strong> It closes the last meaningful audio quality gap, removes the strongest "but Apple Music sounds better" objection, and gives Spotify a reason to raise Premium prices again (e.g. a "Spotify Premium Max" tier at $15.99). It also strengthens the value proposition for the AirPods Pro user who currently keeps Apple Music as a second subscription just for Atmos. Turn that person into a Spotify-only user.
+    </div>
+  </div>
+
+  <div class="scores">
+    <div class="score-card">
+      <div class="score-label">Discovery &amp; algorithm</div>
+      <div class="score-bars">
+        <div class="bar-row"><span class="bar-label" style="color:#1DB954; font-weight:500;">Spotify</span><div class="bar-track"><div class="bar-fill-s" style="width:92%;"></div></div><span class="bar-pct">92</span></div>
+        <div class="bar-row"><span class="bar-label" style="color:#fc3c44; font-weight:500;">Apple Music</span><div class="bar-track"><div class="bar-fill-a" style="width:68%;"></div></div><span class="bar-pct">68</span></div>
+      </div>
+    </div>
+    <div class="score-card">
+      <div class="score-label">Audio quality</div>
+      <div class="score-bars">
+        <div class="bar-row"><span class="bar-label" style="color:#1DB954; font-weight:500;">Spotify</span><div class="bar-track"><div class="bar-fill-s" style="width:62%;"></div></div><span class="bar-pct">62</span></div>
+        <div class="bar-row"><span class="bar-label" style="color:#fc3c44; font-weight:500;">Apple Music</span><div class="bar-track"><div class="bar-fill-a" style="width:95%;"></div></div><span class="bar-pct">95</span></div>
+      </div>
+    </div>
+    <div class="score-card">
+      <div class="score-label">Social features</div>
+      <div class="score-bars">
+        <div class="bar-row"><span class="bar-label" style="color:#1DB954; font-weight:500;">Spotify</span><div class="bar-track"><div class="bar-fill-s" style="width:88%;"></div></div><span class="bar-pct">88</span></div>
+        <div class="bar-row"><span class="bar-label" style="color:#fc3c44; font-weight:500;">Apple Music</span><div class="bar-track"><div class="bar-fill-a" style="width:22%;"></div></div><span class="bar-pct">22</span></div>
+      </div>
+    </div>
+    <div class="score-card">
+      <div class="score-label">Value for money</div>
+      <div class="score-bars">
+        <div class="bar-row"><span class="bar-label" style="color:#1DB954; font-weight:500;">Spotify</span><div class="bar-track"><div class="bar-fill-s" style="width:60%;"></div></div><span class="bar-pct">60</span></div>
+        <div class="bar-row"><span class="bar-label" style="color:#fc3c44; font-weight:500;">Apple Music</span><div class="bar-track"><div class="bar-fill-a" style="width:80%;"></div></div><span class="bar-pct">80</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
